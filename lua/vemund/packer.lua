@@ -36,4 +36,14 @@ return require('packer').startup(function()
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
     use 'rcarriga/nvim-dap-ui'
+
+    -- Tasks
+    use {
+        'jedrzejboczar/toggletasks.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'akinsho/toggleterm.nvim',
+            'nvim-telescope/telescope.nvim',
+        }
+    }
 end)

@@ -76,7 +76,6 @@ command_center.add({
             {"n", "<C-E>", noremap},
         }
     },
-
     {
         desc = "Add current working directory to workspace list",
         cmd = "<CMD>lua require('workspaces').add()<CR>",
@@ -110,17 +109,44 @@ command_center.add({
         keys = { "n", "<leader>f:", noremap },
     },
     {
+        desc = "Search in vim-command-history",
+        cmd = "<CMD>Telescope command_history<CR>",
+        keys = { "n", "<leader>fh:", noremap },
+    },
+    {
         desc = "Find workspace",
         cmd = "<CMD>Telescope workspaces<CR>",
         keys = { "n", "<leader>fw", noremap },
     },
 
+
+    {
+        desc = "Open tasks",
+        cmd = "<CMD>Telescope toggletasks spawn<CR>",
+        keys = { "n", "<leader>ts", noremap },
+    },
+    {
+        desc = "Select tasks",
+        cmd = "<CMD>Telescope toggletasks select<CR>",
+        keys = { "n", "<leader>tS", noremap },
+    },
+    { 
+        desc = "Toggle term",
+        cmd = "<CMD>ToggleTerm<CR>",
+        keys = { "n" , "<leader>tt", noremap },
+    },
     -- Keys to resize the window size. This calls Hydra to make resizing easier
     {
         desc = "Resize (increase) buffer height",
         cmd = "zk",
         keys = { "n", "zk", noremap },
-    }
+    },
+
+    {
+        desc = "DAP continue",
+        cmd = "<CMD>lua require('dap').continue()<CR>",
+        keys = { "n", "<leader>ds", noremap },
+    },
 })
 
 -- Window resizer with hydra
@@ -134,5 +160,29 @@ Hydra({
         { 'j', '<CMD>:res -1<CR>' , {desc = "" }},
         { 'h', '<CMD>:vertical resize -1<CR>', {desc = "" }},
         { 'l', '<CMD>:vertical resize +1<CR>', {desc = "" }},
+    }
+})
+
+local dap = require('dap')
+Hydra({
+    name = "Debugger",
+    mode = "n",
+    body = "<leader>d",
+    config = {
+        -- Using the 'pink' color is important! Wihout it DAP commands don't quite work
+        color="pink",
+        hint = {
+            type = "window",
+            border = "rounded"
+        }
+    },
+    heads = {
+        { 'c', dap.continue, silent=true},
+        { 'b', "<CMD>lua require('dap').toggle_breakpoint()<CR>", {desc = "brk."}},
+        { 'J', "<CMD>lua require('dap').step_over()<CR>", {desc = "brk."}},
+        { 'e', "<CMD>lua require('dapui').eval()<CR>", exit=true},
+        { 'v', "<CMD>lua require('dapui').toggle()<CR>", {desc = "view."}},
+        { 'j', "j" },
+        { 'k', "k" },
     }
 })

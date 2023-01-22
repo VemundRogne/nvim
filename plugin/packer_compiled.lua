@@ -134,6 +134,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\8491d\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggletasks.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\8491d\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggletasks.nvim",
+    url = "https://github.com/jedrzejboczar/toggletasks.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\8491d\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "C:\\Users\\8491d\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",

@@ -23,6 +23,16 @@ dap.configurations.c = {
         useExtendedRemote = true,
         stopAtEntry = true
     },
+    {
+        name = 'Launch file',
+        type = "cppdbg",
+        request = "launch",
+        program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopAtEntry = true
+    }
 }
 
 -- Configures dap for python
