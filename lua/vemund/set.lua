@@ -3,7 +3,6 @@ vim.opt.guicursor = "n-v-c:block"
 vim.opt.guicursor = "i:ver50"
 vim.o.cursorline = true
 
-
 -- Leader key to space
 vim.g.mapleader = " "
 
@@ -42,3 +41,14 @@ function _G.set_terminal_keymaps()
     vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+vim.opt.scrolloff = 8
+vim.opt.updatetime = 50
+
+vim.opt.signcolumn = 'yes'
+

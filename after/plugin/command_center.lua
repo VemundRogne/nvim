@@ -118,6 +118,31 @@ command_center.add({
         cmd = "<CMD>Telescope workspaces<CR>",
         keys = { "n", "<leader>fw", noremap },
     },
+    {
+        desc = "Telescope LSP definitions",
+        cmd = "<CMD>Telescope lsp_definitions<CR>",
+        keys = { "n", "gd", noremap },
+    },
+    {
+        desc = "Telescope LSP references",
+        cmd = "<CMD>Telescope lsp_references<CR>",
+        keys = { "n", "gr", noremap},
+    },
+    {
+        desc = "Telescope LSP implmentations",
+        cmd = "<CMD>Telescope lsp_implementations<CR>",
+        keys = {"n", "gi", noremap},
+    },
+    {
+        desc = "Telescope document symbols",
+        cmd = "<CMD>Telescope lsp_document_symbols<CR>",
+        keys = {"n", "gs", noremap},
+    },
+    {
+        desc = "Telescope workspace symbols",
+        cmd = "<CMD>Telescope lsp_workspace_symbols<CR>",
+        keys = {"n", "gS", noremap},
+    },
 
 
     {
@@ -182,6 +207,8 @@ Hydra({
         { 'J', "<CMD>lua require('dap').step_over()<CR>", {desc = "brk."}},
         { 'e', "<CMD>lua require('dapui').eval()<CR>", exit=true},
         { 'v', "<CMD>lua require('dapui').toggle()<CR>", {desc = "view."}},
+        { '1', "<CMD>lua require('dapui').toggle(1)<CR>"},
+        { '2', "<CMD>lua require('dapui').toggle(2)<CR>"},
         { 'j', "j" },
         { 'k', "k" },
     }
