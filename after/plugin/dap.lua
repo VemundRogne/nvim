@@ -36,7 +36,13 @@ dap.configurations.c = {
 }
 
 -- Configures dap for python
-require('dap-python').setup('C:\\Python311\\python.exe')
+if vim.loop.os_uname().sysname == 'Windows_NT' then
+    require('dap-python').setup('C:\\Python311\\python.exe')
+end
+
+if vim.loop.os_uname().sysname == 'Linux' then
+    require('dap-python').setup('python')
+end
 
 -- Configure the UI
 require('dapui').setup()
