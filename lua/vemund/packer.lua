@@ -19,6 +19,10 @@ return require('packer').startup(function()
         requires = { { 'nvim-lua/plenary.nvim'} }
     }
 
+    -- Radical. Convert between number bases
+    use 'glts/vim-magnum'
+    use 'glts/vim-radical'
+
     use 'tpope/vim-fugitive'
 
     -- File stuff
@@ -46,4 +50,6 @@ return require('packer').startup(function()
             'nvim-telescope/telescope.nvim',
         }
     }
+
+    use 'lervag/wiki.vim'
 end)
