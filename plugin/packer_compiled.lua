@@ -199,6 +199,26 @@ _G.packer_plugins = {
     path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-magnum"] = {
+    loaded = true,
+    path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vim-magnum",
+    url = "https://github.com/glts/vim-magnum"
+  },
+  ["vim-radical"] = {
+    loaded = true,
+    path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vim-radical",
+    url = "https://github.com/glts/vim-radical"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
+  ["wiki.vim"] = {
+    loaded = true,
+    path = "/home/vemund/.local/share/nvim/site/pack/packer/start/wiki.vim",
+    url = "https://github.com/lervag/wiki.vim"
+  },
   ["workspaces.nvim"] = {
     loaded = true,
     path = "/home/vemund/.local/share/nvim/site/pack/packer/start/workspaces.nvim",

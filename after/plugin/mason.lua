@@ -36,3 +36,6 @@ end)
 
 lsp.nvim_workspace()
 lsp.setup()
+
+require'lspconfig'.texlab.setup{}
+vim.g.Tex_MultipleCompileFormats='pdf'

@@ -72,4 +72,5 @@ return require('packer').startup(function()
     }
 
     use 'lervag/wiki.vim'
+    use 'lervag/vimtex'
 end)
