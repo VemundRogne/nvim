@@ -204,6 +204,11 @@ _G.packer_plugins = {
     path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vim-magnum",
     url = "https://github.com/glts/vim-magnum"
   },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/tpope/vim-markdown"
+  },
   ["vim-radical"] = {
     loaded = true,
     path = "/home/vemund/.local/share/nvim/site/pack/packer/start/vim-radical",

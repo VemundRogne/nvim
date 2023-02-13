@@ -52,3 +52,8 @@ vim.opt.updatetime = 50
 
 vim.opt.signcolumn = 'yes'
 
+-- wiki.vim config
+vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex']")
+vim.cmd("let g:wiki_link_extension = ''")
+
+vim.cmd("let g:markdown_fenced_languages = ['python']")

@@ -24,6 +24,7 @@ return require('packer').startup(function()
     use 'glts/vim-radical'
 
     use 'tpope/vim-fugitive'
+    use 'tpope/vim-markdown'
 
     -- File stuff
     use 'ThePrimeagen/harpoon'
