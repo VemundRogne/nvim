@@ -109,6 +109,11 @@ command_center.add({
         keys = {"n", "<leader>fg", noremap}
     },
     {
+        desc = "Search (grep) current word in all files",
+        cmd = "<CMD>Telescope grep_string<CR>",
+        keys = {"n", "<leader>faw", noremap},
+    },
+    {
         desc  = "Search inside current buffer",
         cmd = "<CMD>Telescope current_buffer_fuzzy_find<CR>",
         keys = { "n", "<leader>fl", noremap },
