@@ -228,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vemund/.local/share/nvim/site/pack/packer/start/workspaces.nvim",
     url = "https://github.com/natecraddock/workspaces.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/vemund/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

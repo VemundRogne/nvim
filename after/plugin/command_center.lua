@@ -22,6 +22,16 @@ for i = 1, 9 do
     })
 end
 
+command_center.add({
+    {
+        desc = "Follow link",
+        cmd = "<CMD>WikiLinkFollow<CR>",
+        keys = {
+            {"n", "<leader>lf", noremap}
+        }
+    },
+})
+
 
 command_center.add({
     {
@@ -155,7 +165,7 @@ command_center.add({
         cmd = "<CMD>Telescope toggletasks select<CR>",
         keys = { "n", "<leader>tS", noremap },
     },
-    { 
+    {
         desc = "Toggle term",
         cmd = "<CMD>ToggleTerm<CR>",
         keys = { "n" , "<leader>tt", noremap },
@@ -171,6 +181,12 @@ command_center.add({
         desc = "DAP continue",
         cmd = "<CMD>lua require('dap').continue()<CR>",
         keys = { "n", "<leader>ds", noremap },
+    },
+
+    {
+        desc = "Toggle zen mode",
+        cmd = "<CMD>lua require('zen-mode').toggle()<CR>",
+        keys = { "n" , "<leader>zz", noremap },
     },
 })
 
