@@ -7,3 +7,7 @@ require("gruvbox").setup({
 })
 
 vim.cmd("colorscheme gruvbox")
+
+-- Remove error highlight from _ in markdown files
+-- https://github.com/tpope/vim-markdown/issues/79
+vim.cmd("autocmd FileType markdown hi link markdownError NONE")
