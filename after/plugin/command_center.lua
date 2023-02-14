@@ -27,7 +27,7 @@ command_center.add({
         desc = "Follow link",
         cmd = "<CMD>WikiLinkFollow<CR>",
         keys = {
-            {"n", "<leader>lf", noremap}
+            {"n", "<CR>", noremap}
         }
     },
 })
