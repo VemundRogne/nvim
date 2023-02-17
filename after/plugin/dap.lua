@@ -19,7 +19,7 @@ dap.configurations.c = {
         miDebuggerServerAddress = 'localhost:3333',
         miDebuggerPath = 'C:\\dev\\tools\\arm-gnu-toolchain-12.2.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gdb.exe',
         cwd = '${workspaceFolder}',
-        program = "C:\\dev\\test\\Debug\\simple_stm32_testproject.elf",
+        program = "C:\\athena\\aegis\\firmware\\Debug\\gft.elf",
         useExtendedRemote = true,
         stopAtEntry = true
     },
