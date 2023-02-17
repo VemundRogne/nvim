@@ -64,4 +64,13 @@ vim.cmd("let g:wiki_link_extension = ''")
 
 vim.cmd("let g:markdown_fenced_languages = ['python']")
 
-vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
+if vim.loop.os_uname().sysname == 'Windows_NT' then
+    -- This isn't perfect, but it _kinda_ works
+    vim.cmd("autocmd BufEnter *.pdf !Start-Process C:\\Users\\8491d\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe %")
+end
+
+if vim.loop.os_uname().sysname == 'Linux' then
+    -- This is perfect:)
+    -- One possible improvement is to close the buffer or something, for now the buffer opens and shows the binary pdf file
+    vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
+end
