@@ -44,7 +44,12 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+-- Don't configure undodir for windows...
+-- I am sure there is a way to do it, but I havent looked into it:)
+if vim.loop.os_uname().sysname ~= 'Windows_NT' then
+    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+end
 vim.opt.undofile = true
 
 vim.opt.scrolloff = 8
