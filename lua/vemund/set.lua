@@ -58,3 +58,5 @@ vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex']")
 vim.cmd("let g:wiki_link_extension = ''")
 
 vim.cmd("let g:markdown_fenced_languages = ['python']")
+
+vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
