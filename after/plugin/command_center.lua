@@ -225,7 +225,8 @@ Hydra({
     heads = {
         { 'c', dap.continue, silent=true},
         { 'b', "<CMD>lua require('dap').toggle_breakpoint()<CR>", {desc = "brk."}},
-        { 'J', "<CMD>lua require('dap').step_over()<CR>", {desc = "brk."}},
+        { 'J', "<CMD>lua require('dap').step_over()<CR>", {desc = "over"}},
+        { 'L', "<CMD>lua require('dap').step_into()<CR>", {desc = "into"}},
         { 'e', "<CMD>lua require('dapui').eval()<CR>", exit=true},
         { 'v', "<CMD>lua require('dapui').toggle()<CR>", {desc = "view."}},
         { '1', "<CMD>lua require('dapui').toggle(1)<CR>"},
