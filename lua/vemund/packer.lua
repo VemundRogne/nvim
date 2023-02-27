@@ -75,4 +75,11 @@ return require('packer').startup(function()
     use 'lervag/wiki.vim'
     use 'lervag/vimtex'
     use 'folke/zen-mode.nvim'
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end)
