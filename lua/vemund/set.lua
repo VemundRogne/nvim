@@ -59,8 +59,9 @@ vim.opt.signcolumn = 'yes'
 
 -- wiki.vim config
 vim.cmd("let g:wiki_mappings_use_defaults = 'none'")
-vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex']")
+vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf']")
 vim.cmd("let g:wiki_link_extension = ''")
+vim.cmd("let g:wiki_link_toggle_on_follow = 0")
 
 vim.cmd("let g:markdown_fenced_languages = ['python']")
 
