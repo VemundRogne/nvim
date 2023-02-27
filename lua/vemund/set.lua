@@ -66,7 +66,7 @@ vim.cmd("let g:markdown_fenced_languages = ['python']")
 
 if vim.loop.os_uname().sysname == 'Windows_NT' then
     -- This isn't perfect, but it _kinda_ works
-    vim.cmd("autocmd BufEnter *.pdf !Start-Process C:\\Users\\8491d\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe %")
+    vim.cmd("autocmd BufEnter *.pdf !C:\\Users\\8491d\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe '%'")
 end
 
 if vim.loop.os_uname().sysname == 'Linux' then
