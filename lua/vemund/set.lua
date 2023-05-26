@@ -74,4 +74,9 @@ if vim.loop.os_uname().sysname == 'Linux' then
     -- This is perfect:)
     -- One possible improvement is to close the buffer or something, for now the buffer opens and shows the binary pdf file
     vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
+    vim.cmd("autocmd BufEnter *.pdf :q!")
 end
+
+vim.cmd("let g:vimtex_compiler_latexmk = {'options': [ '-pdf', '-shell-escape', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode',],}")
+
+require 'hex'.setup()
