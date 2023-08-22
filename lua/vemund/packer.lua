@@ -57,6 +57,8 @@ return require('packer').startup(function()
         }
     }
 
+    use "airblade/vim-gitgutter"
+
     -- Debugging
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
@@ -82,4 +84,12 @@ return require('packer').startup(function()
             require('Comment').setup()
         end
     }
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
+
 end)
