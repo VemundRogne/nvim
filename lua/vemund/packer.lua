@@ -78,11 +78,11 @@ return require('packer').startup(function()
     use 'lervag/vimtex'
     use 'folke/zen-mode.nvim'
 
+    use 'numToStr/Comment.nvim'
+
     use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
     }
 
     use {
@@ -92,4 +92,7 @@ return require('packer').startup(function()
         },
     }
 
+    use 'tikhomirov/vim-glsl'
+
+    use 'RaafatTurki/hex.nvim'
 end)
