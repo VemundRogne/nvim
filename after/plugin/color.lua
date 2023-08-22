@@ -3,7 +3,11 @@ vim.g.tokyonight_transparent = true
 vim.opt.background = "dark"
 
 require("gruvbox").setup({
-    italic = false,
+    italic = {
+        strings = false,
+        operators = false,
+        comments = false,
+    }
 })
 
 vim.cmd("colorscheme gruvbox")
