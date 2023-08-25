@@ -95,4 +95,9 @@ return require('packer').startup(function()
     use 'tikhomirov/vim-glsl'
 
     use 'RaafatTurki/hex.nvim'
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 end)
