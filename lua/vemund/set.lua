@@ -79,5 +79,6 @@ end
 
 vim.cmd("let g:gitgutter_map_keys = 0")
 vim.cmd("let g:vimtex_compiler_latexmk = {'options': [ '-pdf', '-shell-escape', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode',],}")
+vim.cmd("let g:vimtex_view_method = 'zathura'")
 
 require 'hex'.setup()
