@@ -58,6 +58,7 @@ vim.opt.updatetime = 50
 vim.opt.signcolumn = 'yes'
 
 -- wiki.vim config
+vim.cmd("let g:wiki_root = '~/vault/wiki/'")
 vim.cmd("let g:wiki_mappings_use_defaults = 'none'")
 vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf']")
 vim.cmd("let g:wiki_link_extension = ''")
