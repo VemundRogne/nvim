@@ -73,8 +73,8 @@ end
 if vim.loop.os_uname().sysname == 'Linux' then
     -- This is perfect:)
     -- One possible improvement is to close the buffer or something, for now the buffer opens and shows the binary pdf file
-    vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
-    vim.cmd("autocmd BufEnter *.pdf :q!")
+    -- vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
+    -- vim.cmd("autocmd BufEnter *.pdf :q!")
 end
 
 vim.cmd("let g:gitgutter_map_keys = 0")

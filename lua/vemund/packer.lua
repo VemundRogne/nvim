@@ -31,7 +31,7 @@ return require('packer').startup(function()
     use 'natecraddock/workspaces.nvim'
 
     -- Keybindings
-    use 'FeiyouG/command_center.nvim'
+    use 'FeiyouG/commander.nvim'
     use 'anuvyklack/hydra.nvim'
 
     -- LSPs and stuff

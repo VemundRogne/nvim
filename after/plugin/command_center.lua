@@ -1,7 +1,9 @@
-require("telescope").load_extension("command_center")
+require("commander").setup({})
+require("telescope").load_extension("commander")
 
-local command_center = require("command_center")
+local command_center = require("commander")
 local noremap = {noremap = true}
+
 
 for i = 1, 9 do
     command_center.add({
@@ -36,7 +38,7 @@ command_center.add({
 command_center.add({
     {
         desc = "Open command center",
-        cmd = "<CMD>Telescope command_center<CR>",
+        cmd = "<CMD>Telescope commander<CR>",
         keys = {
             {"n", "<leader>fc", noremap},
             {"v", "<leader>fc", noremap},
@@ -151,7 +153,7 @@ command_center.add({
     {
         desc = "Telescope document symbols",
         cmd = "<CMD>Telescope lsp_document_symbols<CR>",
-        keys = {"n", "gs", noremap},
+        keys = {"n", "gs"},
     },
     {
         desc = "Telescope workspace symbols",
