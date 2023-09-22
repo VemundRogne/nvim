@@ -24,7 +24,7 @@ return require('packer').startup(function()
     use 'glts/vim-radical'
 
     use 'tpope/vim-fugitive'
-    use 'tpope/vim-markdown'
+    -- use 'tpope/vim-markdown'
 
     -- File stuff
     use 'ThePrimeagen/harpoon'
@@ -100,4 +100,5 @@ return require('packer').startup(function()
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+    use 'preservim/vim-markdown'
 end)
