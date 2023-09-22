@@ -24,15 +24,15 @@ for i = 1, 9 do
     })
 end
 
-command_center.add({
-    {
-        desc = "Follow link",
-        cmd = "<CMD>WikiLinkFollow<CR>",
-        keys = {
-            {"n", "<CR>", noremap}
-        }
-    },
-})
+--command_center.add({
+    --{
+        --desc = "Follow link",
+        --cmd = "<CMD>WikiLinkFollow<CR>",
+        --keys = {
+            --{"n", "<CR>", noremap}
+        --}
+    --},
+--})
 
 
 command_center.add({
