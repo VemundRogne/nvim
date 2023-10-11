@@ -40,6 +40,7 @@ function _G.set_terminal_keymaps()
     local opts = { buffer = 0 }
     vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 end
+
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 vim.opt.swapfile = false
@@ -74,12 +75,14 @@ end
 if vim.loop.os_uname().sysname == 'Linux' then
     -- This is perfect:)
     -- One possible improvement is to close the buffer or something, for now the buffer opens and shows the binary pdf file
-    -- vim.cmd("autocmd BufEnter *.pdf :silent !zathura % & disown")
-    -- vim.cmd("autocmd BufEnter *.pdf :q!")
+    -- https://gitlab.com/4U6U57/wsl-open
+    vim.cmd("autocmd BufEnter *.pdf :silent !wsl-open '%' & disown")
+    vim.cmd("autocmd BufEnter *.pdf :q!")
 end
 
 vim.cmd("let g:gitgutter_map_keys = 0")
-vim.cmd("let g:vimtex_compiler_latexmk = {'options': [ '-pdf', '-shell-escape', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode',],}")
+vim.cmd(
+    "let g:vimtex_compiler_latexmk = {'options': [ '-pdf', '-shell-escape', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode',],}")
 vim.cmd("let g:vimtex_view_method = 'zathura'")
 
 vim.cmd("let g:vim_markdown_folding_disabled = 1")
