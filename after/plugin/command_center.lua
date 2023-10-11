@@ -2,7 +2,7 @@ require("commander").setup({})
 require("telescope").load_extension("commander")
 
 local command_center = require("commander")
-local noremap = {noremap = true}
+local noremap = { noremap = true }
 
 
 for i = 1, 9 do
@@ -11,37 +11,26 @@ for i = 1, 9 do
             desc = string.format("Harpoon to file %s", i),
             cmd = string.format("<CMD>lua require('harpoon.ui').nav_file(%s)<CR>", i),
             keys = {
-                {"n", string.format("<leader>%s", i), noremap},
+                { "n", string.format("<leader>%s", i), noremap },
             }
         },
         {
             desc = string.format("Harpoon to terminal %s", i),
             cmd = string.format("<CMD>lua require('harpoon.term').gotoTerminal(%s)<CR>", i),
             keys = {
-                {"n", string.format("<leader>t%s", i), noremap},
+                { "n", string.format("<leader>t%s", i), noremap },
             }
         },
     })
 end
-
---command_center.add({
-    --{
-        --desc = "Follow link",
-        --cmd = "<CMD>WikiLinkFollow<CR>",
-        --keys = {
-            --{"n", "<CR>", noremap}
-        --}
-    --},
---})
-
 
 command_center.add({
     {
         desc = "Open command center",
         cmd = "<CMD>Telescope commander<CR>",
         keys = {
-            {"n", "<leader>fc", noremap},
-            {"v", "<leader>fc", noremap},
+            { "n", "<leader>fc", noremap },
+            { "v", "<leader>fc", noremap },
         }
     },
 
@@ -50,42 +39,42 @@ command_center.add({
         desc = "Navigate to pane below",
         cmd = "<CMD>wincmd j<CR>",
         keys = {
-            {"n", "<leader>j", noremap},
+            { "n", "<leader>j", noremap },
         }
     },
     {
         desc = "Navigate to pane above",
         cmd = "<CMD>wincmd k<CR>",
         keys = {
-            {"n", "<leader>k", noremap},
+            { "n", "<leader>k", noremap },
         }
     },
     {
         desc = "Navigate to pane left",
         cmd = "<CMD>wincmd h<CR>",
         keys = {
-            {"n", "<leader>h", noremap},
+            { "n", "<leader>h", noremap },
         }
     },
     {
         desc = "Navigate to pane right",
         cmd = "<CMD>wincmd l<CR>",
         keys = {
-            {"n", "<leader>l", noremap},
+            { "n", "<leader>l", noremap },
         }
     },
     {
         desc = "Add file to harpoon",
         cmd = "<CMD>lua require('harpoon.mark').add_file()<CR>",
         keys = {
-            {"n", "<leader>af", noremap},
+            { "n", "<leader>af", noremap },
         }
     },
     {
         desc = "Harpoon quick menu",
         cmd = "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>",
         keys = {
-            {"n", "<C-E>", noremap},
+            { "n", "<C-E>", noremap },
         }
     },
     {
@@ -98,26 +87,26 @@ command_center.add({
     {
         desc = "Find files",
         cmd = "<CMD>Telescope find_files<CR>",
-        keys = {"n", "<leader>ff", noremap}
+        keys = { "n", "<leader>ff", noremap }
     },
     {
         desc = "Find hidden files",
         cmd = "<CMD>Telescope find_files hidden=true<CR>",
-        keys = {"n", "<leader>fhf", noremap}
+        keys = { "n", "<leader>fhf", noremap }
     },
     {
         desc = "Search inside all files",
         cmd = "<CMD>Telescope live_grep<CR>",
-        keys = {"n", "<leader>fg", noremap}
+        keys = { "n", "<leader>fg", noremap }
     },
     {
         desc = "Search (grep) current word in all files",
         cmd = "<CMD>Telescope grep_string<CR>",
-        keys = {"n", "<leader>faw", noremap},
+        keys = { "n", "<leader>faw", noremap },
     },
     {
-        desc  = "Search inside current buffer",
-        cmd = "<CMD>Telescope current_buffer_fuzzy_find<CR>",
+        desc = "Search inside current buffer",
+        cmd  = "<CMD>Telescope current_buffer_fuzzy_find<CR>",
         keys = { "n", "<leader>fl", noremap },
     },
     {
@@ -143,22 +132,22 @@ command_center.add({
     {
         desc = "Telescope LSP references",
         cmd = "<CMD>Telescope lsp_references<CR>",
-        keys = { "n", "gr", noremap},
+        keys = { "n", "gr", noremap },
     },
     {
         desc = "Telescope LSP implmentations",
         cmd = "<CMD>Telescope lsp_implementations<CR>",
-        keys = {"n", "gi", noremap},
+        keys = { "n", "gi", noremap },
     },
     {
         desc = "Telescope document symbols",
         cmd = "<CMD>Telescope lsp_document_symbols<CR>",
-        keys = {"n", "gs"},
+        keys = { "n", "gs" },
     },
     {
         desc = "Telescope workspace symbols",
         cmd = "<CMD>Telescope lsp_workspace_symbols<CR>",
-        keys = {"n", "gS", noremap},
+        keys = { "n", "gS", noremap },
     },
 
 
@@ -175,7 +164,7 @@ command_center.add({
     {
         desc = "Toggle term",
         cmd = "<CMD>ToggleTerm<CR>",
-        keys = { "n" , "<leader>tt", noremap },
+        keys = { "n", "<leader>tt", noremap },
     },
     -- Keys to resize the window size. This calls Hydra to make resizing easier
     {
@@ -193,7 +182,7 @@ command_center.add({
     {
         desc = "Toggle zen mode",
         cmd = "<CMD>lua require('zen-mode').toggle()<CR>",
-        keys = { "n" , "<leader>zz", noremap },
+        keys = { "n", "<leader>zz", noremap },
     },
 })
 
@@ -204,10 +193,10 @@ Hydra({
     mode = 'n',
     body = 'z',
     heads = {
-        { 'k', '<CMD>:res +1<CR>' , {desc = "" }},
-        { 'j', '<CMD>:res -1<CR>' , {desc = "" }},
-        { 'h', '<CMD>:vertical resize -1<CR>', {desc = "" }},
-        { 'l', '<CMD>:vertical resize +1<CR>', {desc = "" }},
+        { 'k', '<CMD>:res +1<CR>', { desc = "" } },
+        { 'j', '<CMD>:res -1<CR>', { desc = "" } },
+        { 'h', '<CMD>:vertical resize -1<CR>', { desc = "" } },
+        { 'l', '<CMD>:vertical resize +1<CR>', { desc = "" } },
     }
 })
 
@@ -218,21 +207,21 @@ Hydra({
     body = "<leader>d",
     config = {
         -- Using the 'pink' color is important! Wihout it DAP commands don't quite work
-        color="pink",
+        color = "pink",
         hint = {
             type = "window",
             border = "rounded"
         }
     },
     heads = {
-        { 'c', dap.continue, silent=true},
-        { 'b', "<CMD>lua require('dap').toggle_breakpoint()<CR>", {desc = "brk."}},
-        { 'J', "<CMD>lua require('dap').step_over()<CR>", {desc = "over"}},
-        { 'L', "<CMD>lua require('dap').step_into()<CR>", {desc = "into"}},
-        { 'e', "<CMD>lua require('dapui').eval()<CR>", exit=true},
-        { 'v', "<CMD>lua require('dapui').toggle()<CR>", {desc = "view."}},
-        { '1', "<CMD>lua require('dapui').toggle(1)<CR>"},
-        { '2', "<CMD>lua require('dapui').toggle(2)<CR>"},
+        { 'c', dap.continue,                                      silent = true },
+        { 'b', "<CMD>lua require('dap').toggle_breakpoint()<CR>", { desc = "brk." } },
+        { 'J', "<CMD>lua require('dap').step_over()<CR>",         { desc = "over" } },
+        { 'L', "<CMD>lua require('dap').step_into()<CR>",         { desc = "into" } },
+        { 'e', "<CMD>lua require('dapui').eval()<CR>",            exit = true },
+        { 'v', "<CMD>lua require('dapui').toggle()<CR>",          { desc = "view." } },
+        { '1', "<CMD>lua require('dapui').toggle(1)<CR>" },
+        { '2', "<CMD>lua require('dapui').toggle(2)<CR>" },
         { 'j', "j" },
         { 'k', "k" },
     }
