@@ -61,7 +61,7 @@ vim.opt.signcolumn = 'yes'
 -- wiki.vim config
 vim.cmd("let g:wiki_root = '~/vault/wiki/'")
 vim.cmd("let g:wiki_mappings_use_defaults = 'none'")
-vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf']")
+vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf', 'xlsx']")
 vim.cmd("let g:wiki_link_extension = ''")
 vim.cmd("let g:wiki_link_toggle_on_follow = 0")
 
@@ -78,6 +78,9 @@ if vim.loop.os_uname().sysname == 'Linux' then
     -- https://gitlab.com/4U6U57/wsl-open
     vim.cmd("autocmd BufEnter *.pdf :silent !wsl-open '%' & disown")
     vim.cmd("autocmd BufEnter *.pdf :q!")
+
+    vim.cmd("autocmd BufEnter *.xlsx :silent !wsl-open '%' & disown")
+    vim.cmd("autocmd BufEnter *.xlsx :q!")
 end
 
 vim.cmd("let g:gitgutter_map_keys = 0")
