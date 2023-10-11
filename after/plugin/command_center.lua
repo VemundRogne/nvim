@@ -33,36 +33,6 @@ command_center.add({
             { "v", "<leader>fc", noremap },
         }
     },
-
-    -- Pane navigation
-    {
-        desc = "Navigate to pane below",
-        cmd = "<CMD>wincmd j<CR>",
-        keys = {
-            { "n", "<leader>j", noremap },
-        }
-    },
-    {
-        desc = "Navigate to pane above",
-        cmd = "<CMD>wincmd k<CR>",
-        keys = {
-            { "n", "<leader>k", noremap },
-        }
-    },
-    {
-        desc = "Navigate to pane left",
-        cmd = "<CMD>wincmd h<CR>",
-        keys = {
-            { "n", "<leader>h", noremap },
-        }
-    },
-    {
-        desc = "Navigate to pane right",
-        cmd = "<CMD>wincmd l<CR>",
-        keys = {
-            { "n", "<leader>l", noremap },
-        }
-    },
     {
         desc = "Add file to harpoon",
         cmd = "<CMD>lua require('harpoon.mark').add_file()<CR>",
