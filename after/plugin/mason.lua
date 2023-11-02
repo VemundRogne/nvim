@@ -58,3 +58,5 @@ lsp.setup()
 require 'lspconfig'.texlab.setup {}
 vim.g.Tex_MultipleCompileFormats = 'pdf'
 
+require("lspconfig").pyright.setup({})
+
