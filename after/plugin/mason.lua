@@ -1,3 +1,6 @@
+require('mason').setup({})
+require("mason-lspconfig").setup()
+
 local lsp = require('lsp-zero').preset({
     name = 'minimal',
     set_lsp_keymaps = false,
@@ -5,11 +8,12 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_serves = false,
 })
 
-lsp.ensure_installed({
-    'pyright'
-})
+--lsp.ensure_installed({
+--'pyright'
+--})
 
 local cmp = require('cmp')
+local cmp_action = require("lsp-zero").cmp_action()
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -22,10 +26,14 @@ cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 cmp_mappings['<CR>'] = nil
 
-
-lsp.setup_nvim_cmp({
+cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
     mapping = cmp_mappings
 })
+
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
@@ -44,8 +52,9 @@ lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.buffer_autoformat()
 end)
 
-lsp.nvim_workspace()
+--lsp.nvim_workspace()
 lsp.setup()
 
 require 'lspconfig'.texlab.setup {}
 vim.g.Tex_MultipleCompileFormats = 'pdf'
+

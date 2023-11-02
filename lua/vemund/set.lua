@@ -90,4 +90,3 @@ vim.cmd("let g:vimtex_view_method = 'zathura'")
 
 vim.cmd("let g:vim_markdown_folding_disabled = 1")
 
-require 'hex'.setup()
