@@ -30,5 +30,16 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "L3MON4D3/LuaSnip",
     "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim"
+    "williamboman/mason-lspconfig.nvim",
+    "lervag/wiki.vim",
+    "lervag/vimtex",
+    "nvim-tree/nvim-web-devicons",
+    "nvim-tree/nvim-tree.lua",
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = {"MarkdownPreview"},
+        ft = {"markdown"},
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+    "natecraddock/workspaces.nvim",
 })
