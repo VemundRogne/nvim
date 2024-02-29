@@ -4,22 +4,25 @@ local dap = require('dap')
 dap.adapters.cppdbg = {
     id = 'cppdbg',
     type = 'executable',
-    command = "C:\\dev\\tools\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe",
+    command = "/home/vemund/debug_adapter/extension/debugAdapters/bin/OpenDebugAD7",
     options = {
-        detached = false
+        detached = true
     }
 }
 
-dap.configurations.c = {
+dap.configurations.cpp = {
     {
         name = 'Attach to openocd-gdbserver',
         type = 'cppdbg',
         request = 'launch',
         MIMode = 'gdb',
-        miDebuggerServerAddress = 'localhost:3333',
-        miDebuggerPath = 'C:\\dev\\tools\\arm-gnu-toolchain-12.2.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gdb.exe',
-        cwd = '${workspaceFolder}',
-        program = "C:\\dev\\gridlevel\\firmware\\build\\gridlevel.elf",
+        --miDebuggerServerAddress = '10.0.0.10:3333',
+        miDebuggerServerAddress = '192.168.2.101:3333',
+        miDebuggerPath = 'arm-none-eabi-gdb',
+        cwd = '~',
+        --program = "/home/vemund/gridlevel/firmware/build/gridlevel.elf",
+        --program = "/home/vemund/FWCommons/test/stm32g4/build/stm32g4_test.elf",
+        program = "/home/vemund/FWCommons/test/stm32l4/build/test_stm32l4r5.elf",
         useExtendedRemote = true,
         stopAtEntry = true
     },
@@ -34,6 +37,7 @@ dap.configurations.c = {
         stopAtEntry = true
     }
 }
+
 
 -- Configures dap for python
 if vim.loop.os_uname().sysname == 'Windows_NT' then
