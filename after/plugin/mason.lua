@@ -33,7 +33,9 @@ cmp.setup({
     },
     mapping = cmp_mappings,
     sources = {
-        {name = "path"}
+        {name = "path"},
+        {name = "nvim_lsp"},
+        {name = "buffer"}
     }
 })
 
