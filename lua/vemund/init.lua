@@ -43,4 +43,5 @@ require("lazy").setup({
         build = function() vim.fn["mkdp#util#install"]() end,
     },
     "natecraddock/workspaces.nvim",
+    {"nvim-treesitter/nvim-treesitter", build=":TSUpdate"},
 })
