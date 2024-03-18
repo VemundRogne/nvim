@@ -152,6 +152,12 @@ command_center.add({
         cmd = "<CMD>lua require('zen-mode').toggle()<CR>",
         keys = { "n", "<leader>zz", noremap },
     },
+    -- Use wiki plugin to follow links
+    {
+        desc = "Follow wiki-link",
+        cmd = "<CMD>WikiLinkFollow<CR>",
+        keys = {"n", "<leader>wl", noremap},
+    },
 })
 
 -- Window resizer with hydra

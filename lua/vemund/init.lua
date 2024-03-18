@@ -33,6 +33,7 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "lervag/vimtex",
+    "lervag/wiki",
     "nvim-tree/nvim-web-devicons",
     "nvim-tree/nvim-tree.lua",
     "preservim/vim-markdown",
@@ -49,9 +50,13 @@ require("lazy").setup({
         opts = {
             workspaces = {
                 {
+                    name = "vault",
+                    path = "/home/vemund/vault/",
+                },
+                {
                     name = "test",
                     path = "/home/vemund/test_vault/",
-                }
+                },
             }
         },
     },
