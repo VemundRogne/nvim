@@ -119,23 +119,6 @@ command_center.add({
         cmd = "<CMD>Telescope lsp_workspace_symbols<CR>",
         keys = { "n", "gS", noremap },
     },
-
-    -- wiki stuff
-    {
-        desc = "Open wiki index",
-        cmd = "<CMD>WikiIndex<CR>",
-        keys = {"n", "<leader>ww", noremap},
-    },
-    {
-        desc = "Telescope through wiki pages",
-        cmd = "<CMD>lua require('wiki.telescope').pages()<CR>",
-        keys = {"n", "<leader>wf", noremap},
-    },
-    {
-        desc = "Follow wiki-link",
-        cmd = "<CMD>WikiLinkFollow<CR>",
-        keys = {"n", "<leader>wl", noremap},
-    },
     {
         desc = "Open tasks",
         cmd = "<CMD>Telescope toggletasks spawn<CR>",

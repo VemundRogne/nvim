@@ -58,14 +58,7 @@ vim.opt.updatetime = 50
 
 vim.opt.signcolumn = 'yes'
 
--- wiki.vim config
-vim.cmd("let g:wiki_root = '~/vault/wiki/'")
-vim.cmd("let g:wiki_mappings_use_defaults = 'none'")
-vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf', 'xlsx']")
-vim.cmd("let g:wiki_link_extension = ''")
-vim.cmd("let g:wiki_link_toggle_on_follow = 0")
-
-vim.cmd("let g:markdown_fenced_languages = ['python']")
+vim.cmd("let g:markdown_fenced_languages = ['python', 'c', 'cpp']")
 
 if vim.loop.os_uname().sysname == 'Windows_NT' then
     -- This isn't perfect, but it _kinda_ works

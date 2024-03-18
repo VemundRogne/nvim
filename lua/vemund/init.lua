@@ -32,10 +32,10 @@ require("lazy").setup({
     "L3MON4D3/LuaSnip",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "lervag/wiki.vim",
     "lervag/vimtex",
     "nvim-tree/nvim-web-devicons",
     "nvim-tree/nvim-tree.lua",
+    "preservim/vim-markdown",
     {
         "iamcco/markdown-preview.nvim",
         cmd = {"MarkdownPreview"},
@@ -44,4 +44,16 @@ require("lazy").setup({
     },
     "natecraddock/workspaces.nvim",
     {"nvim-treesitter/nvim-treesitter", build=":TSUpdate"},
+    {
+        "epwalsh/obsidian.nvim", version = "*", lazy = false, ft = "markdown",
+        opts = {
+            workspaces = {
+                {
+                    name = "test",
+                    path = "/home/vemund/test_vault/",
+                }
+            }
+        },
+    },
+    "jbyuki/nabla.nvim"
 })
