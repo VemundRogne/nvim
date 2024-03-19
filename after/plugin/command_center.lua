@@ -158,6 +158,11 @@ command_center.add({
         cmd = "<CMD>WikiLinkFollow<CR>",
         keys = {"n", "<leader>wl", noremap},
     },
+    {
+        desc = "Paste from system clipboard",
+        cmd = "\"+p",
+        keys = {"n", "<leader>p", noremap},
+    },
 })
 
 -- Window resizer with hydra
