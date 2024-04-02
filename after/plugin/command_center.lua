@@ -163,6 +163,23 @@ command_center.add({
         cmd = "\"+p",
         keys = {"n", "<leader>p", noremap},
     },
+    --Nabla: $2\cdot\pi$
+    {
+        desc = "Nabla popup",
+        cmd = "<CMD>lua require('nabla').popup()<CR>",
+        keys = {"n", "<leader>ma", noremap},
+    },
+    {
+        desc = "Nabla toggle virt",
+        cmd = "<CMD>lua require('nabla').toggle_virt()<CR>",
+        keys = {"n", "<leader>Ma", noremap},
+    },
+    {
+        desc = "Obsidian quick switch",
+        cmd = "<CMD>ObsidianQuickSwitch<CR>",
+        keys = {"n", "<leader>wf", noremap},
+    },
+
 })
 
 -- Window resizer with hydra

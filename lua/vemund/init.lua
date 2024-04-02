@@ -77,5 +77,10 @@ require("lazy").setup({
             end,
         },
     },
-    "jbyuki/nabla.nvim"
+    "jbyuki/nabla.nvim",
+    "RaafatTurki/hex.nvim",
+    "dkarter/bullets.vim",
+    "glts/vim-magnum",
+    "glts/vim-radical",
+
 })
