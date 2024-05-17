@@ -50,14 +50,29 @@ require("lazy").setup({
         opts = {
             workspaces = {
                 {
-                    name = "vault",
-                    path = "/home/vemund/vault/",
+                    name = "work",
+                    path = "/home/vemund/vaults/work/",
                 },
                 {
-                    name = "test",
-                    path = "/home/vemund/test_vault/",
+                    name = "wiki",
+                    path = "/home/vemund/vaults/wiki/",
+                },
+                {
+                    name = "vault",
+                    path = "/home/vemund/vaults/vault",
+                },
+                {
+                    name = "vaults",
+                    path = "/home/vemund/vaults",
                 },
             },
+
+            daily_notes = {
+                folder = "notes/dailies",
+            },
+
+            notes_subdir = "notes",
+            new_notes_location = "notes_subdir",
 
             note_id_func = function(title)
                 -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
@@ -76,6 +91,10 @@ require("lazy").setup({
                 return tostring(os.time()) .. "-" .. suffix
             end,
         },
+    },
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
     },
     "jbyuki/nabla.nvim",
     "RaafatTurki/hex.nvim",

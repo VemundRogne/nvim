@@ -80,13 +80,16 @@ vim.cmd("let g:gitgutter_map_keys = 0")
 vim.cmd(
     "let g:vimtex_compiler_latexmk = {'options': [ '-pdf', '-shell-escape', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode',],}")
 vim.cmd("let g:vimtex_view_method = 'zathura'")
+--vim.cmd("let g:vimtex_view_general_viewer = 'sumatraPDF'")
 
 vim.cmd("let g:vim_markdown_folding_disabled = 1")
 
 
 -- Setup wiki plugin to follow links for me
 vim.cmd("let g:wiki_mappings_use_defaults = 'none'")
-vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf', 'xlsx']")
+vim.cmd("let g:wiki_filetypes = ['md', 'py', 'tex', 'pdf', 'xlsx', 'cpp', 'png']")
 vim.cmd("let g:wiki_link_extension = ''")
 vim.cmd("let g:wiki_link_toggle_on_follow = 0")
+
+vim.cmd("set conceallevel=2")
 
