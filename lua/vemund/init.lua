@@ -16,8 +16,27 @@ require("vemund.set")
 require("lazy").setup({
     "tpope/vim-fugitive",
     "ellisonleao/gruvbox.nvim",
-    "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim",
+    {
+        "nvim-telescope/telescope.nvim",
+        dependencies = {
+            {"nvim-telescope/telescope-live-grep-args.nvim"},
+	    {"nvim-lua/plenary.nvim"},
+        },
+        config = function()
+            local lga_actions = require("telescope-live-grep-args.actions")
+            local opts = {
+                defaults = {
+                    mappings = {
+                        i = {
+                            ["<C-k>"] = lga_actions.quote_prompt()
+                        },
+                    },
+                },
+            }
+            require("telescope").load_extension("live_grep_args")
+            require("telescope").setup(opts)
+        end,
+    },
     "FeiyouG/commander.nvim",
     "anuvyklack/hydra.nvim",
     "mfussenegger/nvim-dap",

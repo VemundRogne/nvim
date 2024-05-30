@@ -66,7 +66,7 @@ command_center.add({
     },
     {
         desc = "Search inside all files",
-        cmd = "<CMD>Telescope live_grep<CR>",
+        cmd = "<CMD>:lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
         keys = { "n", "<leader>fg", noremap }
     },
     {
