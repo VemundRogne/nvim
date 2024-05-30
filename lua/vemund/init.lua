@@ -92,10 +92,6 @@ require("lazy").setup({
             end,
         },
     },
-    {
-        "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
-    },
     "jbyuki/nabla.nvim",
     "RaafatTurki/hex.nvim",
     "dkarter/bullets.vim",
