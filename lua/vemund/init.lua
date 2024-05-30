@@ -40,6 +40,7 @@ require("lazy").setup({
     "FeiyouG/commander.nvim",
     "anuvyklack/hydra.nvim",
     "mfussenegger/nvim-dap",
+    "nvim-neotest/nvim-nio",
     "mfussenegger/nvim-dap-python",
     "rcarriga/nvim-dap-ui",
     "ThePrimeagen/harpoon",
