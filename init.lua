@@ -1,2 +1,2 @@
-require("vemund")
+require("config.lazy")
 
