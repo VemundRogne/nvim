@@ -44,15 +44,6 @@ vim.opt.hlsearch = false
 
 vim.opt.smartindent = true
 
-vim.opt.scrolloff = 8
-
--- Enable esc to go out of terminal mode
-function _G.set_terminal_keymaps()
-    local opts = { buffer = 0 }
-    vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-end
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-
 -- Do not care about swap and backup files
 vim.opt.swapfile = false
 vim.opt.backup = false

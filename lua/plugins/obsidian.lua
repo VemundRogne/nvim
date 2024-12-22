@@ -1,4 +1,4 @@
-print("Hostname =:" .. require("../utils.hostname").get_hostname())
+--print("Hostname =:" .. require("../utils.hostname").get_hostname())
 
 local function workspaces_for_hostname()
     local hostname = require("../utils.hostname").get_hostname()
