@@ -1,17 +1,17 @@
 -- Bootstrap lazy.nvim: https://lazy.folke.io/installation
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
-            { "\nPress any key to exit..." },
-        }, true, {})
-        vim.fn.getchar()
-        os.exit(1)
-    end
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out, "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -31,9 +31,12 @@ vim.o.cursorline = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- Add column for signs (like errors or breakpoints); we do not want to shift all characters when addding a sign
+vim.opt.signcolumn = "yes"
+
 -- Sensible j and k behaviour for wrapped lines
-vim.keymap.set('n', 'j', 'gj')
-vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
 
 -- Tabs
 vim.opt.tabstop = 4
@@ -49,6 +52,6 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 require("lazy").setup({
-    spec = {{ import = "plugins" }},
-    checker = {enabled = true},
+	spec = { { import = "plugins" } },
+	checker = { enabled = true },
 })

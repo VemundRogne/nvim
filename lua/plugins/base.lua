@@ -1,4 +1,4 @@
 return {
-    "tpope/vim-fugitive",
-    "tpope/vim-sensible"
+	"tpope/vim-fugitive",
+	"tpope/vim-sensible",
 }
