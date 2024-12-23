@@ -30,6 +30,16 @@ return {
 					{ "v", "<leader>fc", noremap },
 				},
 			},
+			{
+				desc = "Paste from system clipboard",
+				cmd = '"+p',
+				keys = { "n", "<leader>p", noremap },
+			},
+			{
+				desc = "Copy to system clipboard",
+				cmd = '"+y',
+				keys = { "n", "<leader>y", noremap },
+			},
 		})
 	end,
 }

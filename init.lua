@@ -1,5 +1,8 @@
 require("config.lazy")
 
+-- Clipboard needs apt package: xclip
+vim.api.nvim_set_option("clipboard", "unnamed")
+
 -- Set some local settings for terminal buffers
 local set = vim.opt_local
 vim.api.nvim_create_autocmd("TermOpen", {
