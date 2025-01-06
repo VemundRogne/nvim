@@ -19,6 +19,10 @@ return {
 					{ name = "buffer" },
 					{ name = "path" },
 				},
+				window = {
+					completion = cmp.config.window.bordered(),
+					documentation = cmp.config.window.bordered(),
+				},
 				mapping = {
 					["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
 					["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
