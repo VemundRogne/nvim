@@ -53,6 +53,21 @@ return {
 				cmd = "<CMD>ObsidianTags<CR>",
 				keys = { "n", "<leader>wt", noremap },
 			},
+			{
+				desc = "Obsidian links",
+				cmd = "<CMD>ObsidianLinks<CR>",
+				keys = { "n", "<leader>wl", noremap },
+			},
+			{
+				desc = "Obsidian link",
+				cmd = "<CMD>ObsidianLink<CR>",
+				keys = { "v", "<leader>wl", noremap },
+			},
+			{
+				desc = "Obsidian link (to new note that you create now)",
+				cmd = "<CMD>ObsidianLinkNew<CR>",
+				keys = { "v", "<leader>wL", noremap },
+			},
 		})
 	end,
 }
