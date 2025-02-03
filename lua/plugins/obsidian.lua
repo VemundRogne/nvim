@@ -12,6 +12,15 @@ local function workspaces_for_hostname()
 				},
 			}
 		end,
+		-- Work-laptop:
+		["AUT-IFWMsN7KHSU"] = function()
+			return {
+				{
+					name = "wiki",
+					path = "/home/vemund/vaults/wiki/",
+				},
+			}
+		end,
 	}
 
 	-- No point in serving a default... Obsidian gets upset if we pass something empty...
