@@ -48,6 +48,11 @@ return {
 				cmd = "<CMD>ObsidianSearch<CR>",
 				keys = { "n", "<leader>ws", noremap },
 			},
+			{
+				desc = "Obsidian tags",
+				cmd = "<CMD>ObsidianTags<CR>",
+				keys = { "n", "<leader>wt", noremap },
+			},
 		})
 	end,
 }
