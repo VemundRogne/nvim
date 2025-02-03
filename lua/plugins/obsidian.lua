@@ -43,6 +43,11 @@ return {
 				cmd = "<CMD>ObsidianQuickSwitch<CR>",
 				keys = { "n", "<leader>wf", noremap },
 			},
+			{
+				desc = "Obsidian search",
+				cmd = "<CMD>ObsidianSearch<CR>",
+				keys = { "n", "<leader>ws", noremap },
+			},
 		})
 	end,
 }
