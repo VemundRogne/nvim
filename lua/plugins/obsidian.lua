@@ -59,6 +59,11 @@ return {
 				keys = { "n", "<leader>wl", noremap },
 			},
 			{
+				desc = "Obsidian backlinks",
+				cmd = "<CMD>ObsidianBacklinks<CR>",
+				keys = { "n", "<leader>wb", noremap },
+			},
+			{
 				desc = "Obsidian link",
 				cmd = "<CMD>ObsidianLink<CR>",
 				keys = { "v", "<leader>wl", noremap },
@@ -67,6 +72,11 @@ return {
 				desc = "Obsidian link (to new note that you create now)",
 				cmd = "<CMD>ObsidianLinkNew<CR>",
 				keys = { "v", "<leader>wL", noremap },
+			},
+			{
+				desc = "Obsidian rename",
+				cmd = "<CMD>ObsidianRename<CR>",
+				keys = { "n", "<leader>wr", noremap },
 			},
 		})
 	end,
