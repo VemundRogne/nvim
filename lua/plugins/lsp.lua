@@ -15,12 +15,20 @@ return {
 					"pyright",
 					"cmake",
 					"clangd",
+					"tinymist",
 				},
 			})
 
 			require("lspconfig").clangd.setup({})
 			require("lspconfig").pyright.setup({})
 			require("lspconfig").cmake.setup({})
+			require("lspconfig")["tinymist"].setup({
+				settings = {
+					formatterMode = "typstyle",
+					exportPdf = "onType",
+					semanticTokens = "disable",
+				},
+			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
