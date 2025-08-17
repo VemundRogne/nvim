@@ -1,9 +1,10 @@
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
+		version = "^1.0.0",
 		lazy = false,
 		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
+			{ "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 			"neovim/nvim-lspconfig",
 			{ "https://git.sr.ht/~whynothugo/lsp_lines.nvim" },
 			"stevearc/conform.nvim",
