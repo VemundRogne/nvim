@@ -21,6 +21,7 @@ return {
 			})
 
 			require("lspconfig").clangd.setup({})
+			require("lspconfig").protols.setup({})
 			require("lspconfig").pyright.setup({})
 			require("lspconfig").cmake.setup({})
 			require("lspconfig")["tinymist"].setup({
