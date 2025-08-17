@@ -8,7 +8,7 @@ local function workspaces_for_hostname()
 			return {
 				{
 					name = "wiki",
-					path = "/home/vemund/vaults/wiki/",
+					path = "/home/vemund/pkm",
 				},
 			}
 		end,
