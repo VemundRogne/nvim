@@ -32,21 +32,21 @@ return {
 				},
 			})
 
-			vim.api.nvim_create_autocmd("LspAttach", {
-				callback = function(args)
-					local builtin = require("telescope.builtin")
-					local bufnr = args.buf
-					local client = assert(vim.lsp.get_client_by_id(args.data.client_id), "must have valid client")
+			--vim.api.nvim_create_autocmd("LspAttach", {
+			--callback = function(args)
+			--local builtin = require("telescope.builtin")
+			--local bufnr = args.buf
+			--local client = assert(vim.lsp.get_client_by_id(args.data.client_id), "must have valid client")
 
-					--vim.keymap.set("n", "gd", builtin.lsp_definitions, { buffer = 0 })
-					--vim.keymap.set("n", "gr", builtin.lsp_references, { buffer = 0 })
-					--vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
-					--vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
-					vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
+			--vim.keymap.set("n", "gd", builtin.lsp_definitions, { buffer = 0 })
+			--vim.keymap.set("n", "gr", builtin.lsp_references, { buffer = 0 })
+			--vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
+			--vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
+			--vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr })
 
-					vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
-				end,
-			})
+			--vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = bufnr })
+			--end,
+			--})
 
 			require("commander").add({
 				{
