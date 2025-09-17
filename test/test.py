@@ -8,6 +8,7 @@ import numpy as np
 def add_two_numbers(a: int , b: int) -> int:
     return a + b
 
+
 a = np.array([1, 2, 3])
 
 number = 0
