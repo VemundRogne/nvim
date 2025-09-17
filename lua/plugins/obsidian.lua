@@ -12,12 +12,12 @@ local function workspaces_for_hostname()
 				},
 			}
 		end,
-		-- Work-laptop:
-		["AUT-IFWMsN7KHSU"] = function()
+		-- Desktop:
+		["Valhall"] = function()
 			return {
 				{
 					name = "wiki",
-					path = "/home/vemund/vaults/wiki/",
+					path = "/home/vemund/pkm",
 				},
 			}
 		end,
