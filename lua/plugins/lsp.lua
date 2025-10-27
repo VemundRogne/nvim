@@ -20,17 +20,18 @@ return {
 				},
 			})
 
-			require("lspconfig").clangd.setup({})
-			require("lspconfig").protols.setup({})
-			require("lspconfig").pyright.setup({})
-			require("lspconfig").cmake.setup({})
-			require("lspconfig")["tinymist"].setup({
+            vim.lsp.config["clangd"] = {}
+			vim.lsp.config["protols"] = {}
+			vim.lsp.config["pyright"] = {}
+            vim.lsp.config["cmake"] = {}
+
+			vim.lsp.config["tinymist"] = {
 				settings = {
 					formatterMode = "typstyle",
 					exportPdf = "onType",
 					semanticTokens = "disable",
 				},
-			})
+			}
 
 			--vim.api.nvim_create_autocmd("LspAttach", {
 			--callback = function(args)
