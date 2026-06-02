@@ -17,6 +17,7 @@ local M = {
             "disassembly",
             "dockerfile",
             "doxygen",
+            "diff",
             "git_config",
             "git_rebase",
             "gitattributes",
