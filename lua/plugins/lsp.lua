@@ -9,8 +9,8 @@ return {
 			"stevearc/conform.nvim",
 		},
 		config = function()
-			--require("mason").setup()
-			--require("mason-lspconfig").setup()
+			require("mason").setup()
+			require("mason-lspconfig").setup()
             vim.lsp.enable('clangd')
 
 			vim.api.nvim_create_autocmd("LspAttach", {
@@ -79,6 +79,8 @@ return {
 					python = { "black" },
 					c = { "clang-format" },
 					lua = { "stylua" },
+                    javascript = { "prettier" },
+                    json = { "jq" }
 				},
 				format_on_save = {
 					timeout_ms = 500,
